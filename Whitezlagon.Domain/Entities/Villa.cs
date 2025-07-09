@@ -14,8 +14,8 @@ namespace WhiteLagon.Domain.Entities
         public int Sqft { get; set; }
         public int Occupency { get; set; }
         public string? ImageUrl { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime Created_At { get; set; }
+        public DateTime Updated_At { get; set; }
         // Additional properties can be added as needed
     }
 }

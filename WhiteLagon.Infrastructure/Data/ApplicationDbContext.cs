@@ -15,5 +15,9 @@ namespace WhiteLagon.Infrastructure.Data
         }
 
         public DbSet<Villa> Villas { get; set; } // Replace 'YourEntity' with your actual entity class  
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
     }
 }
