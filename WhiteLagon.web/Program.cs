@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using WhiteLagon.Infrastructure.Data;
+
 namespace WhiteLagon.web
 {
     public class Program
@@ -8,6 +11,10 @@ namespace WhiteLagon.web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Register the ApplicationDbContext with dependency injection
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
