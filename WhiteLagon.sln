@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36203.30
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhiteLagon.web", "WhiteLagon.web\WhiteLagon.web.csproj", "{32EC2B64-AA30-4E63-8AEE-B0EAB561704B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whitezlagon.Domain", "Whitezlagon.Domain\Whitezlagon.Domain.csproj", "{C9DB796A-C398-40F0-A0BE-DBD6B299A0CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhiteLagon.Domain", "Whitezlagon.Domain\WhiteLagon.Domain.csproj", "{C9DB796A-C398-40F0-A0BE-DBD6B299A0CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhiteLagon.Application", "WhiteLagon.Application\WhiteLagon.Application.csproj", "{A4F71A06-BC4C-4414-936C-C176F421E233}"
 EndProject

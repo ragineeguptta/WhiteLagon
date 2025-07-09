@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Whitezlagon.Domain.Entities
+namespace WhiteLagon.Domain.Entities
 {
     public class Villa
     {
