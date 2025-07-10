@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WhiteLagon.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using WhiteLagon.Infrastructure.Data;
 namespace WhiteLagon.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250709145532_adddata2")]
+    partial class adddata2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,9 +49,6 @@ namespace WhiteLagon.Infrastructure.Migrations
                     b.Property<int>("Occupency")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
                     b.Property<int>("Sqft")
                         .HasColumnType("int");
 
@@ -63,50 +63,46 @@ namespace WhiteLagon.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Created_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9806),
+                            Created_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4935),
                             Description = "Description for Villa 1",
                             ImageUrl = "https://example.com/villa1.jpg",
                             Name = "Villa 1",
                             Occupency = 2,
-                            Price = 1000,
                             Sqft = 500,
-                            Updated_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9809)
+                            Updated_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4937)
                         },
                         new
                         {
                             Id = 2,
-                            Created_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9818),
+                            Created_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4946),
                             Description = "Description for Villa 2",
                             ImageUrl = "https://example.com/villa2.jpg",
                             Name = "Villa 2",
                             Occupency = 4,
-                            Price = 1200,
                             Sqft = 700,
-                            Updated_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9819)
+                            Updated_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4946)
                         },
                         new
                         {
                             Id = 3,
-                            Created_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9821),
+                            Created_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4948),
                             Description = "Description for Villa 3",
                             ImageUrl = "https://example.com/villa3.jpg",
                             Name = "Villa 3",
                             Occupency = 6,
-                            Price = 2000,
                             Sqft = 900,
-                            Updated_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9821)
+                            Updated_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4949)
                         },
                         new
                         {
                             Id = 4,
-                            Created_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9823),
+                            Created_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4950),
                             Description = "Description for Villa 4",
                             ImageUrl = "https://example.com/villa4.jpg",
                             Name = "Villa 4",
                             Occupency = 8,
-                            Price = 900,
                             Sqft = 1100,
-                            Updated_At = new DateTime(2025, 7, 10, 15, 54, 1, 298, DateTimeKind.Utc).AddTicks(9823)
+                            Updated_At = new DateTime(2025, 7, 9, 14, 55, 32, 507, DateTimeKind.Utc).AddTicks(4950)
                         });
                 });
 #pragma warning restore 612, 618
