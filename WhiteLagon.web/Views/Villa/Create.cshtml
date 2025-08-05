@@ -13,7 +13,7 @@
     <div class="card-body border p-4">  
         <form action="Create" method="post" class="row">
             <div class="col-12 mb-3 p-3">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-floating py-1 col-12">
                     <input asp-for="Name" class="form-control border shadow" />
                     <label asp-for="Name" class="ms-2">Name</label>
@@ -60,3 +60,8 @@
         </form>  
     </div>  
 </div>
+
+
+
+
+
