@@ -28,7 +28,7 @@ namespace WhiteLagon.web.Controllers
         {
             if(obj.Name == obj.Description)
             {
-                ModelState.AddModelError("", "The Name and Description cannot be the same.");
+                ModelState.AddModelError("name", "The Name and Description cannot be the same.");
             }
             if (ModelState.IsValid)
             {
