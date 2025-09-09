@@ -22,7 +22,7 @@ namespace WhiteLagon.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WhiteLagon.Domain.Entities.Villa", b =>
+            modelBuilder.Entity("Villa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
