@@ -35,8 +35,10 @@ namespace WhiteLagon.web.Controllers
 
                 _db.Villas.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Villa created successfully";
                 return RedirectToAction("Index", "Villa");
             }
+            TempData["error"] = "Error while creating villa";
             return View();
         }
 
@@ -58,8 +60,10 @@ namespace WhiteLagon.web.Controllers
 
                 _db.Villas.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Villa updated successfully";
                 return RedirectToAction("Index", "Villa");
             }
+            TempData["error"] = "Error while updating villa";
             return View();
         }
 
@@ -79,11 +83,12 @@ namespace WhiteLagon.web.Controllers
             Villa? objFromDb = _db.Villas.FirstOrDefault(u => u.Id == obj.Id);
             if (objFromDb is not null)
             {
-
                 _db.Villas.Remove(objFromDb);
                 _db.SaveChanges();
+                TempData["success"] = "Villa deleted successfully";
                 return RedirectToAction("Index");
             }
+            TempData["error"] = "Error while deleting villa";
             return View();
         }
     }
