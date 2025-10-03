@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using WhiteLagon.Application.Common.Interfaces;
 using WhiteLagon.Infrastructure.Data;
+using WhiteLagon.Infrastructure.Repository;
 
 namespace WhiteLagon.web
 {
@@ -15,6 +17,7 @@ namespace WhiteLagon.web
             // Register the ApplicationDbContext with dependency injection
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IVillaRepository, VillaRepository>();
 
             var app = builder.Build();
 
