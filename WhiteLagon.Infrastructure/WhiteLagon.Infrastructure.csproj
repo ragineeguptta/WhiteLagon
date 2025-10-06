@@ -23,6 +23,7 @@
 	
 	
 	<ItemGroup>
+	  <ProjectReference Include="..\WhiteLagon.Application\WhiteLagon.Application.csproj" />
 	  <ProjectReference Include="..\Whitezlagon.Domain\WhiteLagon.Domain.csproj" />
 	</ItemGroup>
 	
