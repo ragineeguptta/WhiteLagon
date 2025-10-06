@@ -16,6 +16,7 @@ namespace WhiteLagon.Infrastructure.Data
 
         public DbSet<Villa> Villas { get; set; } // Replace 'YourEntity' with your actual entity class  
         public DbSet<VillaNumber> VillaNumbers { get; set; }
+        public DbSet<Amenity> Amenities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -121,6 +122,45 @@ namespace WhiteLagon.Infrastructure.Data
                     VillaId = 3,
                 }
              );
+
+            modelBuilder.Entity<Amenity>().HasData(
+                new Amenity
+                {
+                    Id = 1,
+                    VillaId = 1,
+                    Name = "Amenity 1"
+                },
+                new Amenity
+                {
+                    Id = 2,
+                    VillaId = 2,
+                    Name = "Amenity 2"
+                },
+                new Amenity
+                {
+                    Id = 3,
+                    VillaId = 1,
+                    Name = "Amenity 3"
+                },
+                new Amenity
+                {
+                    Id = 4,
+                    VillaId = 4,
+                    Name = "Amenity 4"
+                },
+                new Amenity
+                {
+                    Id = 5,
+                    VillaId = 4,
+                    Name = "Amenity 5"
+                },
+                new Amenity
+                {
+                    Id = 6,
+                    VillaId = 2,
+                    Name = "Amenity 6"
+                }
+            );
         }
     }
 }
