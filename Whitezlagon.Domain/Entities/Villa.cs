@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -27,5 +29,9 @@ namespace WhiteLagon.Domain.Entities
         public DateTime Created_At { get; set; } = DateTime.UtcNow;
         public DateTime Updated_At { get; set; } = DateTime.UtcNow;
         // Additional properties can be added as needed
+        [ValidateNever]
+        public IEnumerable<Amenity> VillaAmenity { get; set; }
+        [NotMapped]
+        public bool IsAvailable { get; set; } = true;
     }
 }
